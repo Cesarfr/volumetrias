@@ -1,0 +1,70 @@
+SELECT
+			E.id,
+			E.rfc,
+			E.razon_social,
+			V.cantidad,
+			V.anio, 
+			V.mes
+		FROM volumetrias V
+			JOIN empresas E
+		ON V.id_empresa = E.id
+		WHERE V.id_cliente =  (SELECT id FROM clientes WHERE razon_social = 'BMW') 
+			AND V.id_servicio = 9
+			AND V.id_empresa is not null
+		ORDER BY V.id_empresa, V.anio, V.mes
+SELECT
+			E.id,
+			E.rfc,
+			E.razon_social,
+			V.cantidad,
+			V.anio, 
+			V.mes
+		FROM volumetrias V
+			JOIN empresas E
+		ON V.id_empresa = E.id
+		WHERE V.id_cliente =  (SELECT id FROM clientes WHERE razon_social = 'McDONALDs ARCOS') 
+			AND V.id_servicio = 6
+			AND V.id_empresa is not null
+		ORDER BY V.id_empresa, V.anio, V.mes
+SELECT
+			E.id,
+			E.rfc,
+			E.razon_social,
+			V.cantidad,
+			V.anio, 
+			V.mes
+		FROM volumetrias V
+			JOIN empresas E
+		ON V.id_empresa = E.id
+		WHERE V.id_cliente =  (SELECT id FROM clientes WHERE razon_social = 'McDONALDs') 
+			AND V.id_servicio = 3
+			AND V.id_empresa is not null
+		ORDER BY V.id_empresa, V.anio, V.mes
+SELECT
+			E.id,
+			E.rfc,
+			E.razon_social,
+			V.cantidad,
+			V.anio, 
+			V.mes
+		FROM volumetrias V
+			JOIN empresas E
+		ON V.id_empresa = E.id
+		WHERE V.id_cliente =  (SELECT id FROM clientes WHERE razon_social = 'BELCORP') 
+			AND V.id_servicio = 8
+			AND V.id_empresa is not null
+		ORDER BY V.id_empresa, V.anio, V.mes
+SELECT
+			E.id,
+			E.rfc,
+			E.razon_social,
+			V.cantidad,
+			V.anio, 
+			V.mes
+		FROM volumetrias V
+			JOIN empresas E
+		ON V.id_empresa = E.id
+		WHERE V.id_cliente =  (SELECT id FROM clientes WHERE razon_social = 'BELCORP') 
+			AND V.id_servicio = 9
+			AND V.id_empresa is not null
+		ORDER BY V.id_empresa, V.anio, V.mes
